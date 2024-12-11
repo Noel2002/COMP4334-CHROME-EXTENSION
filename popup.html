@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Load Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 10px;
+      border-radius: 20px;   
+      text-align: center;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      color: rgb(24, 94, 169);
+    }
+    .stats {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: row;
+    }
+    .http{
+      border-right: 1px solid #000;
+    }
+    .protocol-stat {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .protocol{
+      font-weight: bold;
+      font-size: 14px;
+    }
+    #http-value{
+      font-size: 20px;
+      color: rgb(169, 24, 39);
+    }
+    #https-value{
+      font-size: 20px;
+      color: rgb(24, 169, 39);
+    }
+  </style>
+</head>
+<body>
+  <h1>Traffic Monitor</h1>
+  <hr>
+  <div id="stats" class="stats">
+    <div class="protocol-stat http">
+      <p class="protocol">HTTP</p>
+      <p id="http-value"></p>
+    </div>
+    <div class="protocol-stat">
+      <p class="protocol">HTTPS</p>
+      <p id="https-value"></p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
